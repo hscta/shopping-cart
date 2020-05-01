@@ -1,0 +1,43 @@
+.discount {
+	color: green;
+}
+
+.displayPrice {
+	color: #ccc;
+}
+
+.add-to-cart-btn {
+	background: yellow;
+	color: #000;
+	border: 1px solid #ccc;
+	border-radius: 13%;
+}
+
+.items {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-gap: 0.2rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.sortFilters {
+	padding: 0.2rem;
+	background: #ccc;
+}
+
+.sort-lg {
+	padding: 0.5rem;
+	cursor: pointer;
+}
+
+.sort-lg:active,
+.sort-lg:visited {
+	color: blue;
+}
+.item {
+	padding: 1rem;
+}
+
+@media (min-width: 900px) {
+}

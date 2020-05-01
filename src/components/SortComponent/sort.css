@@ -1,0 +1,17 @@
+.sorting-lg {
+	padding-left: 5rem !important;
+}
+.selectedSort {
+	color: blue;
+}
+@media screen and (max-width: 1024px) {
+	.sort-xs {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: 968px) {
+	.sort-lg {
+		display: none !important;
+	}
+}

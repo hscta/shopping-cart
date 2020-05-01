@@ -1,0 +1,53 @@
+@font-face {
+	font-family: "Verdana";
+	src: url("//db.onlinewebfonts.com/t/3ba52ab1fa0cd726e7868e9c6673902c.eot");
+	src: url("//db.onlinewebfonts.com/t/3ba52ab1fa0cd726e7868e9c6673902c.eot?#iefix") format("embedded-opentype"),
+		url("//db.onlinewebfonts.com/t/3ba52ab1fa0cd726e7868e9c6673902c.woff2") format("woff2"),
+		url("//db.onlinewebfonts.com/t/3ba52ab1fa0cd726e7868e9c6673902c.woff") format("woff"),
+		url("//db.onlinewebfonts.com/t/3ba52ab1fa0cd726e7868e9c6673902c.ttf") format("truetype"),
+		url("//db.onlinewebfonts.com/t/3ba52ab1fa0cd726e7868e9c6673902c.svg#Verdana") format("svg");
+}
+
+html,
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.App {
+	text-align: center;
+}
+
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
