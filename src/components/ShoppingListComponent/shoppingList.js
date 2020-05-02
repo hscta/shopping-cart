@@ -13,12 +13,10 @@ const ShoppingList = () => {
 
 	let filteredItems = { ...shoppingListObj.filteredItems };
 
-	console.log(filteredItems);
 	if (Object.keys(shoppingListObj.searchItems).length) {
 		filteredItems = { ...shoppingListObj.searchItems };
 	}
 
-	console.log(filteredItems);
 	return (
 		<div className="container-fluid">
 			<div className="row d-lg-none  text-center">

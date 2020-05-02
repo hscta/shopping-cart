@@ -24,6 +24,11 @@ function sortReducer(state, action) {
 function Sort(props) {
 	let [ state, dispatch ] = useReducer(sortReducer, initialState);
 
+
+	useEffect(()=> {
+		applySort();
+	},[state.sortVal])
+
 	const applySort = () => {
 		let filteredItems = { ...props.filteredItems };
 		if (!Object.keys(filteredItems).length) return;
@@ -56,7 +61,6 @@ function Sort(props) {
 					className={state.sortVal === sortParams['highLow'] ? 'sort-lg selectedSort' : 'sort-lg'}
 					onClick={(e) => {
 						dispatch({ type: 'onChangeSortVal', value: sortParams['highLow'] });
-						applySort();
 					}}
 				>
 					Price -- High Low
@@ -65,7 +69,6 @@ function Sort(props) {
 					className={state.sortVal === sortParams['lowHigh'] ? 'sort-lg selectedSort' : 'sort-lg'}
 					onClick={(e) => {
 						dispatch({ type: 'onChangeSortVal', value: sortParams['lowHigh'] });
-						applySort();
 					}}
 				>
 					Price -- Low High
@@ -74,7 +77,6 @@ function Sort(props) {
 					className={state.sortVal === sortParams['discount'] ? 'sort-lg selectedSort' : 'sort-lg'}
 					onClick={(e) => {
 						dispatch({ type: 'onChangeSortVal', value: sortParams['discount'] });
-						applySort();
 					}}
 				>
 					Price -- Discount
