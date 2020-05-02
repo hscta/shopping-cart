@@ -1,7 +1,7 @@
 export const initialState = {
 	selectedVal: 10000,
 	minFilter: 0,
-	maxFilter: 10000,
+	maxFilter: 100000,
 	modalPopup: false
 };
 

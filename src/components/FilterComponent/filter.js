@@ -41,7 +41,7 @@ const Filter = (props) => {
 							}}
 						/>
 					</div>
-					<span>10000</span>
+					<span>100000</span>
 				</div>
 
 				<div>

@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './shoppingList.css';
 import Filter from '../FilterComponent/filter';
@@ -10,6 +10,22 @@ const ShoppingList = () => {
 	const shoppingListObj = useSelector((state) => state.shoppingListReducer);
 	const cartItems = useSelector((state) => state.cartReducer.cartItems);
 	const dispatch = useDispatch();
+
+
+	useEffect(()=> {
+			console.log('sssssssssssssssssssssss');
+			fetch("../../data.json", {
+				credentials:'same-origin',
+				method:'GET',
+				mode:'cors',
+				headers:{
+					'Content-Type': 'application/json',
+					'Accept':'application/json'
+				}
+			})
+			.then(res=>res.json())
+			.then (res=>console.log(res))
+	},[]);
 
 	let filteredItems = { ...shoppingListObj.filteredItems };
 
@@ -43,7 +59,7 @@ const ShoppingList = () => {
 								filteredItems.items.map((item, k) => {
 									return (
 										<div key={k} className="item">
-											<img src={item1Img} alt={item.name} />
+											<img src={item.image} alt={item.name} />
 											<div>{item.name}</div>
 											<div>
 												<span>{item.price.actual}</span> &nbsp;
