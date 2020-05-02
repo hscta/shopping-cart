@@ -2,6 +2,8 @@ import React, { useReducer, useEffect } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { initialState, filterReducer } from '../../reducers/filterReducer';
 
+import "./filter.css";
+
 const Filter = (props) => {
 	const [ filterObj, dispatch ] = useReducer(filterReducer, initialState);
 
