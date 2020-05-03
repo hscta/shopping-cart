@@ -46,7 +46,7 @@ const Filter = (props) => {
 
 				<div>
 					<input
-					style={{background:'blue', color:'#000'}}
+					style={{background:'blue', color:'#FFF'}}
 						type="button"
 						id="applyFilter"
 						value="Apply"
